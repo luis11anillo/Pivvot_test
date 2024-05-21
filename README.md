@@ -1,5 +1,3 @@
-## Get started
-
 ### Server side :arrows_counterclockwise:
 
 1. **Install dependencies:**  Inside the [Server](https://github.com/luis11anillo/Pivvot_test/tree/master/Server) folder run the command
