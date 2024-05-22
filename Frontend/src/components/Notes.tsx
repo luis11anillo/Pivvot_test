@@ -24,16 +24,21 @@ async function deleteNote() {
     clearNote(id);
 }
 
-function excerpt() {
-    const resu = description;
-    const ver = resu.slice(0, 100)
-    return ver
+function excerptf(text: string, limit: number) {
+    if (typeof(text) !== 'string') { return ''}
+    const res = text.length > limit ? text.slice(0, limit) + '...' : text
+    return res
 }
+
+const excerpt = excerptf(description, 80);
 
 
 function press() {
-    setIsDeleteActive(false);
-    setIsModalVisible(true);
+    if (isDeleteActive === true) {
+        setIsDeleteActive(false);
+    } else {
+        setIsModalVisible(true);
+    }
 }
 
  return (
@@ -41,12 +46,11 @@ function press() {
         <TouchableOpacity
             onLongPress={() => setIsDeleteActive(true)}
             onPress={press}
-            //activeOpacity={0.8}
             style={Styles.container}
         >
             <View style={[Styles.item, {backgroundColor: theme.colors.background} ]}>
                 <Text style={[Styles.title, {color: theme.colors.text}]}>{ title }</Text>
-                <Text style={[Styles.desc, {color: theme.colors.text}]}>{ description }</Text>
+                <Text style={[Styles.desc, {color: theme.colors.text}]}>{ excerpt }</Text>
             </View>
             
             { isDeleteActive && (
@@ -99,6 +103,7 @@ const Styles = StyleSheet.create({
     }, 
     desc: {
         paddingRight: 33,
+        paddingTop: 2
     }
 
 });
