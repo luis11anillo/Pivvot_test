@@ -54,13 +54,13 @@ export default function CreateNote({notes, setNotes, visible, onClose}) {
                     <TextInput
                         style={styles.input}
                         placeholder="Title"
-                        placeholderTextColor={theme.colors.text}
+                        placeholderTextColor={theme.colors.placeh}
                         value={title}
                         onChangeText={setTitle}
                     />
                     <TextInput
                         style={styles.input}
-                        placeholderTextColor={theme.colors.text}
+                        placeholderTextColor={theme.colors.placeh}
                         placeholder="Description"
                         value={description}
                         onChangeText={setDescription}

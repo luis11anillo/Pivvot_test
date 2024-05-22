@@ -8,6 +8,7 @@ export const lightTheme = {
         text: '#000000',
         border: '#cccccc',
         notification: '#2074e9',
+        placeh: '#cccccc',
     },
 };
 
@@ -20,5 +21,6 @@ export const darkTheme = {
         text: '#ffffff',
         border: '#444444',
         notification: '#2074e9',
+        placeh: '#ffffff',
     },
 };
