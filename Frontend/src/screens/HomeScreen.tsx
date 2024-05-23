@@ -35,7 +35,7 @@ export default function NoteList() {
     
     return (
         <>
-            <SafeAreaView>
+            <SafeAreaView style={styles.container}>
                 <Pressable
                     onPress={() => setIsCreating(true)}
                     style={styles.create}
@@ -63,13 +63,17 @@ export default function NoteList() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
     titleheader: {
         fontWeight: "800",
         fontSize: 28,
         marginBottom: 15,
     },
     flalisContainer: {
-        paddingHorizontal: 15,
+        paddingHorizontal: 20,
+        paddingBottom: 30,
         marginTop: 15,
         gap: 15
     },

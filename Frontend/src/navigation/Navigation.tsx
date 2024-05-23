@@ -24,7 +24,7 @@ export default function App() {
                     screenOptions={({ route }) => ({
                         tabBarIcon: ({ focused, color}) => {
                             let iconName;
-                            if ( route.name === 'Home') {
+                            if ( route.name === 'Notes') {
                                 iconName = focused ? 'book' : 'book-outline'
                                 color = focused ? '#2074e9' : '#b0b0b0'
                             } else if (route.name === 'Setting') {
@@ -36,7 +36,7 @@ export default function App() {
                     })
                     }
                 >
-                    <Tab.Screen name='Home' component={HomeScreen}/>
+                    <Tab.Screen name='Notes' component={HomeScreen}/>
                     <Tab.Screen name='Setting' component={SettingScreen}/>
                 </Tab.Navigator>
             </NavigationContainer>
