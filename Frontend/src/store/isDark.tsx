@@ -8,7 +8,10 @@ export const isDarkSlice = createSlice({
     reducers: {
         toggle: (state) => {
             state.value = !state.value;
-        }
+        },
+/*         toggle2: (isDark) => {
+            isDark.value = !isDark.value
+        } */
     }
 })
 

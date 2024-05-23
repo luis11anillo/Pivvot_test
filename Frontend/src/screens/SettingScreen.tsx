@@ -11,7 +11,7 @@ export default function SettingScreen() {
     //const [isDark, setIsDark] = useState(false);
     const isDark = useSelector(selectIsDark)
     const theme = isDark ? darkTheme : lightTheme;
-    
+
     const dispatch = useDispatch();
     
     const toggleSwitch = () => {
@@ -35,7 +35,6 @@ export default function SettingScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        //backgroundColor: '#FFFF',
         borderRadius: 20,
         marginTop: 20,
         marginHorizontal: 15,
