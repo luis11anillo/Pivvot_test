@@ -1,4 +1,4 @@
-import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme, DefaultTheme, } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import SettingScreen from '../screens/SettingScreen';
@@ -11,14 +11,13 @@ import { darkTheme, lightTheme } from '../theme';
 const Tab = createBottomTabNavigator();
 
 
-export default function App() {
-    //const isDark = useSelector(selectIsDark);
-    //console.log(isDark)
+const App = () => {
+    const isDark = useSelector(selectIsDark);
+    const theme = isDark ? DarkTheme : DefaultTheme
 
     return (
-        <Provider store={store}>
             <NavigationContainer
-                /* theme={theme} */
+                theme={theme}
             >
                 <Tab.Navigator
                     screenOptions={({ route }) => ({
@@ -40,6 +39,13 @@ export default function App() {
                     <Tab.Screen name='Setting' component={SettingScreen}/>
                 </Tab.Navigator>
             </NavigationContainer>
+    );
+}
+
+export default function AppWrapper() {
+    return (
+        <Provider store={store} >
+            <App/>
         </Provider>
     );
 }
