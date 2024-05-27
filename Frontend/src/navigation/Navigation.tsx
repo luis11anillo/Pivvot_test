@@ -25,13 +25,14 @@ const App = () => {
                             let iconName;
                             if ( route.name === 'Notes') {
                                 iconName = focused ? 'book' : 'book-outline'
-                                color = focused ? '#2074e9' : '#b0b0b0'
+                                color = focused ? '#87d5f2' : '#b0b0b0'
                             } else if (route.name === 'Setting') {
                                 iconName = focused ? 'settings' : 'settings-outline';
-                                color = focused ? '#2074e9' : '#b0b0b0'
+                                color = focused ? '#87d5f2' : '#b0b0b0'
                             }
-                            return <Icon1 name={iconName} size={20} color={color}/>
+                            return <Icon1 name={iconName} size={25} color={color}/>
                         },
+                        tabBarShowLabel: false,
                     })
                     }
                 >
